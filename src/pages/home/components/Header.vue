@@ -3,14 +3,22 @@
     <div class="header-left">
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
-    <div class="header-input"><span class="iconfont">&#xe632;</span>&nbsp;输入城市景点内容</div>
-    <div class="header-right arrow-icon">城市<span class="iconfont">&#xe64a;</span></div>
+    <div class="header-input">
+      <span class="iconfont">&#xe632;</span>&nbsp;输入城市景点内容
+    </div>
+    <div class="header-right arrow-icon">
+      {{this.city}}
+      <span class="iconfont">&#xe64a;</span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
