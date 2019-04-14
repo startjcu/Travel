@@ -5,12 +5,6 @@
         <swiper-slide v-for="(item,index) of imgs" :key="index">
           <img class="gallary-img" :src="item">
         </swiper-slide>
-        <swiper-slide>
-          <img
-            class="gallary-img"
-            src="http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_r_800x800_087730c7.jpg"
-          >
-        </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
@@ -38,8 +32,8 @@ export default {
       }
     }
   },
-  methods:{
-    handleGallaryClick(){
+  methods: {
+    handleGallaryClick() {
       this.$emit('close')
     }
   }
@@ -47,7 +41,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .container >>> .swiper-.container
+  .container >>> .swiper-container
     overflow: inherit
   .container
     display: flex
@@ -61,7 +55,6 @@ export default {
     bottom: 0
     background: #000
     .wrapper
-      overflow: hidden
       height: 0
       width: 100%
       padding-bottom: 100%
